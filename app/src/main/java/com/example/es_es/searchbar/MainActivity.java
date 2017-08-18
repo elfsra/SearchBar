@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EventObject;
@@ -55,7 +57,7 @@ import java.util.List;
 
     public void searchItem (String textToSearch){
         for (String item:items){
-            if(!item.contains(textToSearch)){
+            if (!item.toLowerCase().contains(textToSearch.toString().toLowerCase())){
                 listItems.remove(item);
             }
         }
